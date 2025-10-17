@@ -14,7 +14,8 @@
 - 生产：Prometheus `/metrics` + Grafana 看板，任务失败率 >5% 报警  
 
 ## Screenshots
-![Swagger UI](docs/swagger.png)
+![Swagger UI](docs/swagger.png)<img width="446" height="240" alt="image" src="https://github.com/user-attachments/assets/282c1c38-932a-4d84-ac35-c7f3158e9afd" />
+
 ![Frontend Upload](docs/frontend.png)
 
 ## Scaling to 10× Users
