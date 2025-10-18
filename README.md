@@ -83,7 +83,7 @@ Protect `POST /jobs` from burst traffic.
 Key snippet
 ```python
 def rate_limit(max_req: int = 10, window: int = 60):
-    async def wrapper(request: Request, *args, **kwargs):
+    async def wrapper(request: Request, args, kwargs):
         user = request.headers.get("x-user-id", "anon")
         key = f"rl:{user}"
         pipe = redis.pipeline()
@@ -92,19 +92,19 @@ def rate_limit(max_req: int = 10, window: int = 60):
         pipe.zcard(key)
         pipe.zadd(key, {now: now})
         pipe.expire(key, window)
-        *_, count, _, _ = pipe.execute()
+        _, count, _, _ = pipe.execute()
         if int(count) >= max_req:
             return JSONResponse(status_code=429, content={"detail": "Too Many Requests"})
-        return await func(request, *args, **kwargs)
+        return await func(request, args, kwargs)
     return wrapper
 ```
 
-Estimated effort**: 1 h
+Estimated effort: 1 h
 
 ---
 
 ## DAG Workflow Visualiser  
-Let users compose pipelines like *Blur → Resize → Segment*.  
+Let users compose pipelines like ‘Blur → Resize → Segment’.  
 - Front-end: `react-flow` drag-and-drop canvas  
 - Export JSON graph → back-end topological sort (`networkx`)  
 - Execute via `Celery chain` / `group`; progress per node pushed over WebSocket  
