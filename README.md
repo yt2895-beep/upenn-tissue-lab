@@ -30,3 +30,20 @@
 
 ## 30s Demo Video
 [Watch on Loom](https://www.loom.com/share/f051cfbbc0a248fabce75ac4b880532f?sid=9ef644eb-9d55-4ae7-9e53-6688ae75702c)
+
+## Current Status & Known Issues
+| Item | Status |
+| Multi-window upload / viewer | ✅ Complete and demo-ready |
+| Sidebar UI (TissueLab style) | ✅ Complete |
+| Local development | ⚠️ Requires Node 20 LTS (Node 22 triggers Next.js internal 500) |
+| Remote demo | ✅ Pushed and browsable |
+
+## Quick Try (no local install needed)
+1. Browse the source: [GitHub Repository](https://github.com/yt2895-beep/upenn-tissue-lab   )  
+2. Download ZIP → extract → follow the steps below to run locally.
+
+## Local Setup (Node 20)
+```bash
+nvm use 20          # or nvm-windows
+npm install
+npm run dev不要这么分点，帮我分段落就好了，但是描述详细一点
