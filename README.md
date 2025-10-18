@@ -33,9 +33,13 @@
 
 ## Current Status & Known Issues
 | Item | Status |
+
 | Multi-window upload / viewer | ✅ Complete and demo-ready |
-| Sidebar UI (TissueLab style) | ✅ Complete |
-| Local development | ⚠️ Requires Node 20 LTS (Node 22 triggers Next.js internal 500) |
+
+| Sidebar UI (TissueLab style) | ✅ Complete 
+
+| Local development | ⚠️ Requires Node 20 LTS (Node 22 triggers Next.js internal 500) 
+
 | Remote demo | ✅ Pushed and browsable |
 
 ## Quick Try (no local install needed)
@@ -46,4 +50,4 @@
 ```bash
 nvm use 20          # or nvm-windows
 npm install
-npm run dev不要这么分点，帮我分段落就好了，但是描述详细一点
+npm run dev
